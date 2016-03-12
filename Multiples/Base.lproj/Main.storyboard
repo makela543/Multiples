@@ -24,14 +24,14 @@
                                     <constraint firstAttribute="width" secondItem="xiB-p8-6VI" secondAttribute="height" multiplier="1:1" id="T5K-qV-Cfi"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="Yxc-0l-fFO" userLabel="Logo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="Yxc-0l-fFO" userLabel="Logo">
                                 <rect key="frame" x="160" y="66" width="280" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="guL-HK-GQf"/>
                                     <constraint firstAttribute="width" constant="280" id="kz2-B9-ZHe"/>
                                 </constraints>
                             </imageView>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TD1-ET-VQF" userLabel="userPrompt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TD1-ET-VQF" userLabel="userPrompt">
                                 <rect key="frame" x="160" y="351" width="280" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="D0C-QI-tjv"/>
@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press ADD to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftk-kZ-PrK" userLabel="Label">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press ADD to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftk-kZ-PrK" userLabel="Label">
                                 <rect key="frame" x="107" y="182" width="387" height="86"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,6 +49,9 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lB6-JD-BoQ" userLabel="AddBtn">
                                 <rect key="frame" x="179" y="414" width="243" height="129"/>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="onAddBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qws-E1-duY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5g-gP-g3P" userLabel="PlayBtn">
                                 <rect key="frame" x="220" y="400" width="161" height="158"/>
@@ -57,6 +60,9 @@
                                     <constraint firstAttribute="width" constant="161" id="sEx-Oh-ohd"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="onPlayBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K3U-Vf-dda"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -64,6 +70,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lB6-JD-BoQ" secondAttribute="bottom" constant="57" id="2mZ-3V-jSq"/>
                             <constraint firstItem="Yxc-0l-fFO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="4bu-UK-TsV"/>
                             <constraint firstItem="xiB-p8-6VI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F3b-71-KG2"/>
+                            <constraint firstItem="R5g-gP-g3P" firstAttribute="top" secondItem="TD1-ET-VQF" secondAttribute="bottom" constant="25" id="FPt-16-zN2"/>
                             <constraint firstItem="lB6-JD-BoQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I4w-Qt-x0M"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xiB-p8-6VI" secondAttribute="bottom" id="MGA-9R-C4i"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R5g-gP-g3P" secondAttribute="bottom" constant="46" id="QER-xR-Iny"/>
